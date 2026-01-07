@@ -80,4 +80,4 @@ export const searchWithAI = async (req, res) => {
             message: `Search With AI Error: ${error}`
         });
     }
-};
+}; 
