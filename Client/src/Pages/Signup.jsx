@@ -24,7 +24,7 @@ const Signup = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [role, setRole] = useState('Student');
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(false); 
 
     const handleSignup = async () => {
         setLoading(true);
