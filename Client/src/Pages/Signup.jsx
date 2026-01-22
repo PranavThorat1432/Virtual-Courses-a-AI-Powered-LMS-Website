@@ -36,7 +36,7 @@ const Signup = () => {
             dispatch(setUserData(result.data));
             setLoading(false);
             navigate('/');
-            toast.success('Signup Successful');
+            toast.success('Signup Successful'); 
 
         } catch (error) {
             console.log(error);
