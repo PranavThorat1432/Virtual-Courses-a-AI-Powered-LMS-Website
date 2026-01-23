@@ -48,7 +48,7 @@ const SignIn = () => {
 
     const googleSignin = async () => {
         try {
-            setGoogleLoading(true);
+            setLoading(true);
             const response = await signInWithPopup(auth, provider);
             const user = response.user;
             const name = user.displayName;
@@ -64,11 +64,12 @@ const SignIn = () => {
             if (result.data.user) {
                 dispatch(setUserData(result.data.user));
                 navigate('/');
-                setGoogleLoading(false);
+                setLoading(false);
                 toast.success('Sign in successful!');
+
             } else {
                 throw new Error('Invalid response from server');
-                setGoogleLoading(false);
+                setLoading(false);
                 toast.error('Failed to sign in with Google');
             }
         
@@ -81,7 +82,7 @@ const SignIn = () => {
                 toast.error(errorMessage);
             }
         } finally {
-            setGoogleLoading(false);
+            setLoading(false);
         }
     };
 
@@ -134,7 +135,7 @@ const SignIn = () => {
                     <div className='w-full text-right pr-1' onClick={() => navigate('/forgot-password')}>
                         <span className='text-[13px] cursor-pointer text-[#585757] hover:underline' >Forgot Password?</span>
                     </div>
-                </div>
+                </div> 
     
                 <div className='w-[80%] flex items-center gap-2 justify-center'>
                     <div className='w-[25%] h-[0.5px] bg-[#c4c4c4]'></div>
