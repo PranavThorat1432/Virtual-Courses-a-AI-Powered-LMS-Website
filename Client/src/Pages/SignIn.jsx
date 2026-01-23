@@ -48,7 +48,7 @@ const SignIn = () => {
 
     const googleSignin = async () => {
         try {
-            setLoading(true);
+            setGoogleLoading(true);
             const response = await signInWithPopup(auth, provider);
             const user = response.user;
             const name = user.displayName;
@@ -64,12 +64,11 @@ const SignIn = () => {
             if (result.data.user) {
                 dispatch(setUserData(result.data.user));
                 navigate('/');
-                setLoading(false);
+                setGoogleLoading(false);
                 toast.success('Sign in successful!');
-
             } else {
                 throw new Error('Invalid response from server');
-                setLoading(false);
+                setGoogleLoading(false);
                 toast.error('Failed to sign in with Google');
             }
         
@@ -82,7 +81,7 @@ const SignIn = () => {
                 toast.error(errorMessage);
             }
         } finally {
-            setLoading(false);
+            setGoogleLoading(false);
         }
     };
 
