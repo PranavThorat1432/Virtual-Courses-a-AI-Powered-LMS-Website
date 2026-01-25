@@ -22,7 +22,7 @@ const Home = () => {
         <Navbar />
 
         <img
-          src={home}
+          src={home} 
           alt=""
           className="object-cover md:object-fill w-full lg:h-full h-[50vh]"
         />
