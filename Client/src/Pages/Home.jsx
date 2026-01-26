@@ -51,7 +51,7 @@ const Home = () => {
         </div>
       </div>
       
-      <Logos/>
+      <Logos/> 
 
       <ExploreCourses/>
 
