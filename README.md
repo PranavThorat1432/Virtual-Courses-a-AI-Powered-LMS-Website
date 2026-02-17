@@ -120,6 +120,19 @@
 
 ## 🎬 Project Preview
 
+![1](https://github.com/user-attachments/assets/feef488a-9882-41cc-98a6-4e598cc005a3)
+
+![2](https://github.com/user-attachments/assets/aca58b49-aad0-4742-b8fc-145210e6aff3)
+
+![3](https://github.com/user-attachments/assets/39bbcc4d-4821-4baf-8865-572ff4ab6bd1)
+
+![4](https://github.com/user-attachments/assets/e63035da-907c-4610-b01b-48b540b9bd19)
+
+![5](https://github.com/user-attachments/assets/3f5f95f9-ff35-465e-957e-d386da668ac0)
+
+![6](https://github.com/user-attachments/assets/e9ad9186-16fa-4eb0-84f5-2ef026c84815)
+
+
 ### 📱 Mobile Responsive Design
 - Fully responsive layout optimized for all devices
 - Touch-friendly interface for mobile users
@@ -787,8 +800,8 @@ This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE
 | Platform              | Link                                                          |
 | --------------------- | ------------------------------------------------------------- |
 | 🧑 **Author**      | Pranav Thorat                      |
-| 🌐 **Live Demo**      | [View Now]()                        |
-| 🧑‍💻 **GitHub Repo** | [View Code]() |
+| 🌐 **Live Demo**      | [View Now](https://virtual-courses-lms-platform.vercel.app)                        |
+| 🧑‍💻 **GitHub Repo** | [View Code](https://github.com/PranavThorat1432/Virtual-Courses-a-AI-Powered-LMS-Website.git) |
 | 💼 **LinkedIn**       | [Connect with Me](https://www.linkedin.com/in/curiouspranavthorat)       |
 | 📩 **Email**          | [pranavthorat95@gmail.com](mailto:pranavthorat95@gmail.com)   |
 
