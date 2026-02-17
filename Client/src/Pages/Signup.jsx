@@ -45,6 +45,8 @@ const Signup = () => {
         }
     };
 
+    const [googleLoading, setGoogleLoading] = useState(false);
+
     const googleSignup = async () => {
         try {
             const response = await signInWithPopup(auth, provider);
@@ -58,10 +60,12 @@ const Signup = () => {
             dispatch(setUserData(result.data));
             navigate('/');
             toast.success('Signup Successful');
+            setGoogleLoading(false);
 
         } catch (error) {
             console.log(error);
             toast.error(error.response.data.message);
+            setGoogleLoading(false);
         }
     };
 
@@ -123,15 +127,22 @@ const Signup = () => {
                     <div className='w-[25%] h-[0.5px] bg-[#c4c4c4]'></div>
                 </div>
 
-                <button className='w-[80%] h-10 border border-black rounded-[5px] flex items-center justify-center cursor-pointer' onClick={googleSignup}>
-                    <FcGoogle className='text-[30px]'/>
-                    <span className='text-[18px] text-gray-500 flex items-center'>
-                        <p className='text-red-500'>o</p>
-                        <p className='text-yellow-500'>o</p>
-                        <p className='text-blue-500'>g</p>
-                        <p className='text-green-600'>l</p>
-                        <p className='text-red-500'>e</p>
-                    </span>
+                <button className='w-[80%] h-10 border border-black rounded-[5px] flex items-center justify-center cursor-pointer' onClick={googleSignup} disabled={googleLoading}>
+                    {googleLoading ? (
+                        <MoonLoader size={20} color="#000000" />
+                    ) : (
+                        <>
+                            <FcGoogle className='text-[30px]'/>
+                    
+                            <span className='text-[18px] text-gray-500 flex items-center'>
+                                <p className='text-red-500'>o</p>
+                                <p className='text-yellow-500'>o</p>
+                                <p className='text-blue-500'>g</p>
+                                <p className='text-green-600'>l</p>
+                                <p className='text-red-500'>e</p>
+                            </span>
+                        </>
+                    )}
                 </button>
 
                 <p>Already have an account? <span className='cursor-pointer text-blue-500 hover:text-blue-600' onClick={() => navigate('/signin')}>SignIn</span></p>

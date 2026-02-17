@@ -67,7 +67,6 @@ const SignIn = () => {
                 setGoogleLoading(false);
                 toast.success('Sign in successful!');
             } else {
-                throw new Error('Invalid response from server');
                 setGoogleLoading(false);
                 toast.error('Failed to sign in with Google');
             }
