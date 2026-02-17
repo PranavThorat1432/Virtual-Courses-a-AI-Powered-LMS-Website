@@ -32,9 +32,10 @@ app.use('/api/course', courseRouter);
 app.use('/api/order', paymentRouter);
 app.use('/api/review', reviewRouter);
 
+// Databse Connection
+connectDB();
 
 
 app.listen(PORT, () => {
-    connectDB();
     console.log(`Server is running on PORT: http://localhost:${PORT}`);
 });
