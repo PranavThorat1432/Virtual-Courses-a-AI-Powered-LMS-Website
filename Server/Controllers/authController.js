@@ -3,6 +3,8 @@ import validator from 'validator';
 import bcrypt from 'bcryptjs';
 import genToken from "../Config/token.js";
 import sendMail from "../Config/mail.js";
+import dotenv from 'dotenv';
+dotenv.config();
 
 export const signUp = async (req, res) => {
     try {
