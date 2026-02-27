@@ -6,6 +6,7 @@ import ai from "../assets/ai.png";
 import ai1 from "../assets/SearchAi.png";
 import { useSelector } from 'react-redux';
 import Card from '../Components/Card';
+import NoCourseFound from '../Components/NoCourseFound';
 
 
 const AllCourses = () => {
@@ -32,6 +33,11 @@ const AllCourses = () => {
             courseCopy = courseCopy?.filter((c) => category?.includes(c.category));
         }
         setFilterCourses(courseCopy);
+    };
+
+    const resetFilter = () => {
+        setCategory([]);
+        setFilterCourses(courseData);
     };
 
     useEffect(() => {
@@ -101,20 +107,27 @@ const AllCourses = () => {
 
             <main className='w-full transition-all duration-300 py-32.5 md:pl-75 px-2.5'>
                 <div className='max-w-7xl mx-auto'>
-                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
-                        {filterCourses?.map((course, index) => (
-                            <div key={index} className='w-full'>
-                                <Card 
-                                    thumbnail={course?.thumbnail} 
-                                    title={course?.title} 
-                                    category={course?.category} 
-                                    price={course?.price} 
-                                    id={course?._id} 
-                                    reviews={course?.reviews}
-                                />
-                            </div>
-                        ))}
-                    </div>
+                    {filterCourses?.length > 0 ? (
+                        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+                            {filterCourses?.map((course, index) => (
+                                <div key={index} className='w-full'>
+                                    <Card 
+                                        thumbnail={course?.thumbnail} 
+                                        title={course?.title} 
+                                        category={course?.category} 
+                                        price={course?.price} 
+                                        id={course?._id} 
+                                        reviews={course?.reviews}
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <NoCourseFound 
+                            onResetFilter={resetFilter} 
+                            selectedCategories={category}
+                        />
+                    )}
                 </div>
             </main>
         </div>
