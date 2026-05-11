@@ -21,7 +21,7 @@
 **A modern, AI-powered Learning Management System built with the MERN stack**
 
  
-</div>
+</div> 
 
 ## 📋 Table of Contents
 
