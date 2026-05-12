@@ -27,7 +27,7 @@
  
 - [🌟 Overview](#-overview) 
 - [🛠️ Tech Stack & Tools](#️-tech-stack--tools) 
-- [✨ Features](#-features)
+- [✨ Features](#-features) 
 - [🎬 Project Preview](#-project-preview)
 - [🏗️ Architecture](#️-architecture)
 - [⚡ Quick Start](#-quick-start)
