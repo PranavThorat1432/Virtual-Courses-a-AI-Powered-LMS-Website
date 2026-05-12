@@ -26,7 +26,7 @@
 ## 📋 Table of Contents     
  
 - [🌟 Overview](#-overview) 
-- [🛠️ Tech Stack & Tools](#️-tech-stack--tools)
+- [🛠️ Tech Stack & Tools](#️-tech-stack--tools) 
 - [✨ Features](#-features)
 - [🎬 Project Preview](#-project-preview)
 - [🏗️ Architecture](#️-architecture)
